@@ -13,10 +13,6 @@ jobs:
         with:
           image: debian:11
           args: --sarif-file-output=snyk.sarif
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: snyk.sarif
       - name: sed
         continue-on-error: true
         run: |
